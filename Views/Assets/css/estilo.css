@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.product {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.product .price {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.product .quantity-label {
+    margin-top: 10px;
+}
+
+.product .quantity-input {
+    margin-top: 5px;
+}
+
+.product .buy-button {
+    margin-top: 10px;
+    background-color: #FFC0CB;
+    color: black;
+}
+
+h1 {
+    color: #FFC0CB; 
+    text-align: center; 
+}

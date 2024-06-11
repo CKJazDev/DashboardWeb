@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Compra de productos</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+    <style>
+        .products-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .products-table {
+            border-collapse: separate;
+            border-spacing: 20px;
+            /* Espaciado entre las celdas de la tabla */
+        }
+
+        .products-table td {
+            width: 50%;
+            padding: 30px;
+            vertical-align: top;
+            text-align: center;
+        }
+
+        .product {
+            text-align: center;
+        }
+
+        .quantity-input {
+            width: 50px;
+        }
+    </style>
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="blank.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>productos</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Otras opciones
+            </div>
+
+            <li class="nav-item">
+                <a class="nav-link" href="login.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Salir</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <span>Gráfica de Productos Comprados y Total Pagado</span>
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Profile
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div>
+                    <div class="products-container">
+                        <table class="products-table">
+                            <tr>
+                                <td>
+                                    <div class="product">
+                                        <img src="C:\Users\CriaturaKawaii\Desktop\Administracion de bases de datos\Pagina de productos/imagen1.png"
+                                            alt="Producto 1" style="width: 100px; height: 100px;">
+                                        <div class="price">Precio: $<span id="precio1"></span></div>
+                                        <div class="quantity-label">Cantidad:
+                                            <input type="number" class="quantity-input" min="1" value="1">
+                                        </div>
+                                        <button class="buy-button" data-product-id="1">Comprar</button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="product">
+                                        <img src="C:\Users\CriaturaKawaii\Desktop\Administracion de bases de datos\Pagina de productos/imagen2.png"
+                                            alt="Producto 2" style="width: 100px; height: 100px;">
+                                        <div class="price">Precio: $<span id="precio2"></span></div>
+                                        <div class="quantity-label">Cantidad:
+                                            <input type="number" class="quantity-input" min="1" value="1">
+                                        </div>
+                                        <button class="buy-button" data-product-id="2">Comprar</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="product">
+                                        <img src="C:\Users\CriaturaKawaii\Desktop\Administracion de bases de datos\Pagina de productos/imagen3.png"
+                                            alt="Producto 3" style="width: 100px; height: 100px;">
+                                        <div class="price">Precio: $<span id="precio3"></span></div>
+                                        <div class="quantity-label">Cantidad:
+                                            <input type="number" class="quantity-input" min="1" value="1">
+                                        </div>
+                                        <button class="buy-button" data-product-id="3">Comprar</button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="product">
+                                        <img src="C:\Users\CriaturaKawaii\Desktop\Administracion de bases de datos\Pagina de productos/imagen4.png"
+                                            alt="Producto 4" style="width: 100px; height: 100px;">
+                                        <div class="price">Precio: $<span id="precio4"></span></div>
+                                        <div class="quantity-label">Cantidad:
+                                            <input type="number" class="quantity-input" min="1" value="1">
+                                        </div>
+                                        <button class="buy-button" data-product-id="4">Comprar</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <button onclick="openModal();" style="background-color: #FFC0CB;">Finalizar compra</button>
+                    <dialog id="modal" style="text-align:center;" class="ventana">
+                        <table>
+                            <tr>
+                                <td>Nombre del producto</td>
+                                <td>Precio</td>
+                                <td>Cantidad</td>
+                                <td>Total</td>
+                            </tr>
+                            <tr>
+                                <td><img src="C:\Users\CriaturaKawaii\Desktop\Administracion de bases de datos\Pagina de productos/imagen1.png"
+                                        alt="Producto 1" style="width: 100px; height: 150;"></td>
+                                <td id="precio-modal1"></td>
+                                <td id="cantidad1"></td>
+                                <td id="total1"></td>
+                            </tr>
+                            <tr>
+                                <td><img src="C:\Users\CriaturaKawaii\Desktop\Administracion de bases de datos\Pagina de productos/imagen2.png"
+                                        alt="Producto 2" style="width: 100px; height: 150;"></td>
+                                <td id="precio-modal2"></td>
+                                <td id="cantidad2"></td>
+                                <td id="total2"></td>
+                            </tr>
+                            <tr>
+                                <td><img src="C:\Users\CriaturaKawaii\Desktop\Administracion de bases de datos\Pagina de productos/imagen3.png"
+                                        alt="Producto 3" style="width: 100px; height: 150;"></td>
+                                <td id="precio-modal3"></td>
+                                <td id="cantidad3"></td>
+                                <td id="total3"></td>
+                            </tr>
+                            <tr>
+                                <td><img src="C:\Users\CriaturaKawaii\Desktop\Administracion de bases de datos\Pagina de productos/imagen4.png"
+                                        alt="Producto 4" style="width: 100px; height: 150;"></td>
+                                <td id="precio-modal4"></td>
+                                <td id="cantidad4"></td>
+                                <td id="total4"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><b>Total General:</b></td>
+                                <td id="totalCantidad"></td>
+                                <td id="totalPrecio"></td>
+                            </tr>
+                        </table>
+                        <button onclick="window.modal.close();" style="background-color: #FFC0CB;">Cerrar</button>
+                    </dialog>
+
+                    <script>
+                        // Definir los precios y hacerlos globales
+                        window.precio1 = 20.00;
+                        window.precio2 = 30.00;
+                        window.precio3 = 40.00;
+                        window.precio4 = 50.00;
+                        // Mostrar los precios en los elementos HTML correspondientes
+                        document.getElementById("precio1").textContent = precio1.toFixed(2);
+                        document.getElementById("precio2").textContent = precio2.toFixed(2);
+                        document.getElementById("precio3").textContent = precio3.toFixed(2);
+                        document.getElementById("precio4").textContent = precio4.toFixed(2);
+
+                        // Agregar event listeners a los botones de comprar
+                        document.querySelectorAll('.buy-button').forEach(function (button) {
+                            button.addEventListener('click', function () {
+                                var productId = this.getAttribute('data-product-id');
+                                var quantityInput = this.previousElementSibling.querySelector('.quantity-input');
+                                var quantity = quantityInput.value;
+
+                                // Guardar la cantidad en el almacenamiento local
+                                localStorage.setItem('product_' + productId + '_quantity', quantity);
+                                console.log('Cantidad comprada del producto ' + productId + ': ' + quantity);
+                            });
+                        });
+
+                        function openModal() {
+                            // Recuperar los precios y cantidades del almacenamiento local
+                            const precios = [20.00, 30.00, 40.00, 50.00];
+                            let totalCantidad = 0;
+                            let totalPrecio = 0;
+
+                            for (let i = 1; i <= 4; i++) {
+                                const cantidad = parseInt(localStorage.getItem('product_' + i + '_quantity')) || 0;
+                                document.getElementById('precio-modal' + i).textContent = '$' + precios[i - 1].toFixed(2);
+                                document.getElementById('cantidad' + i).textContent = cantidad;
+                                const total = precios[i - 1] * cantidad;
+                                document.getElementById('total' + i).textContent = '$' + total.toFixed(2);
+                                totalCantidad += cantidad;
+                                totalPrecio += total;
+                            }
+
+                            // Mostrar el total general al final de la tabla
+                            document.getElementById('totalCantidad').textContent = totalCantidad;
+                            document.getElementById('totalPrecio').textContent = '$' + totalPrecio.toFixed(2);
+
+                            window.modal.showModal();
+                        }
+                    </script>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Your Website 2020</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+</body>
+
+</html>
