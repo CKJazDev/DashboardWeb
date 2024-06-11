@@ -20,34 +20,7 @@
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
-    <style>
-        .products-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .products-table {
-            border-collapse: separate;
-            border-spacing: 20px;
-            /* Espaciado entre las celdas de la tabla */
-        }
-
-        .products-table td {
-            width: 50%;
-            padding: 30px;
-            vertical-align: top;
-            text-align: center;
-        }
-
-        .product {
-            text-align: center;
-        }
-
-        .quantity-input {
-            width: 50px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/estilo.css">
 
 </head>
 
@@ -148,93 +121,75 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <div>
+                <div class="container-fluid">
                     <div class="products-container">
-                        <table class="products-table">
-                            <tr>
-                                <td>
-                                    <div class="product">
-                                        <img src="C:\Users\CriaturaKawaii\Desktop\Administracion de bases de datos\Pagina de productos/imagen1.png"
-                                            alt="Producto 1" style="width: 100px; height: 100px;">
-                                        <div class="price">Precio: $<span id="precio1"></span></div>
-                                        <div class="quantity-label">Cantidad:
-                                            <input type="number" class="quantity-input" min="1" value="1">
-                                        </div>
-                                        <button class="buy-button" data-product-id="1">Comprar</button>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="product">
-                                        <img src="C:\Users\CriaturaKawaii\Desktop\Administracion de bases de datos\Pagina de productos/imagen2.png"
-                                            alt="Producto 2" style="width: 100px; height: 100px;">
-                                        <div class="price">Precio: $<span id="precio2"></span></div>
-                                        <div class="quantity-label">Cantidad:
-                                            <input type="number" class="quantity-input" min="1" value="1">
-                                        </div>
-                                        <button class="buy-button" data-product-id="2">Comprar</button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="product">
-                                        <img src="C:\Users\CriaturaKawaii\Desktop\Administracion de bases de datos\Pagina de productos/imagen3.png"
-                                            alt="Producto 3" style="width: 100px; height: 100px;">
-                                        <div class="price">Precio: $<span id="precio3"></span></div>
-                                        <div class="quantity-label">Cantidad:
-                                            <input type="number" class="quantity-input" min="1" value="1">
-                                        </div>
-                                        <button class="buy-button" data-product-id="3">Comprar</button>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="product">
-                                        <img src="C:\Users\CriaturaKawaii\Desktop\Administracion de bases de datos\Pagina de productos/imagen4.png"
-                                            alt="Producto 4" style="width: 100px; height: 100px;">
-                                        <div class="price">Precio: $<span id="precio4"></span></div>
-                                        <div class="quantity-label">Cantidad:
-                                            <input type="number" class="quantity-input" min="1" value="1">
-                                        </div>
-                                        <button class="buy-button" data-product-id="4">Comprar</button>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
+                        <div class="product">
+                            <div class="product-row"><img src="C:\Users\CriaturaKawaii\Documents\PracticaDash\Views\Assets\img\imagen1.png" alt="Producto 1" class="product-image"></div>
+                            <div class="product-row product-name">Vestido morado</div>
+                            <div class="product-row product-price">Precio: $<span id="precio1"></span></div>
+                            <div class="product-row product-quantity">Cantidad:
+                                <input type="number" class="quantity-input" min="1" value="1">
+                            </div>
+                            <div class="product-row"><button class="buy-button" data-product-id="1">Comprar</button></div>
+                        </div>
+                        <div class="product">
+                            <div class="product-row"><img src="C:\Users\CriaturaKawaii\Documents\PracticaDash\Views\Assets\img\imagen2.png" alt="Producto 2" class="product-image"></div>
+                            <div class="product-row product-name">Vestido rojo</div>
+                            <div class="product-row product-price">Precio: $<span id="precio2"></span></div>
+                            <div class="product-row product-quantity">Cantidad:
+                                <input type="number" class="quantity-input" min="1" value="1">
+                            </div>
+                            <div class="product-row"><button class="buy-button" data-product-id="2">Comprar</button></div>
+                        </div>
+                        <div class="product">
+                            <div class="product-row"><img src="C:\Users\CriaturaKawaii\Documents\PracticaDash\Views\Assets\img\imagen3.png" alt="Producto 3" class="product-image"></div>
+                            <div class="product-row product-name">Vestido rosa</div>
+                            <div class="product-row product-price">Precio: $<span id="precio3"></span></div>
+                            <div class="product-row product-quantity">Cantidad:
+                                <input type="number" class="quantity-input" min="1" value="1">
+                            </div>
+                            <div class="product-row"><button class="buy-button" data-product-id="3">Comprar</button></div>
+                        </div>
+                        <div class="product">
+                            <div class="product-row"><img src="C:\Users\CriaturaKawaii\Documents\PracticaDash\Views\Assets\img\imagen4.png" alt="Producto 4" class="product-image"></div>
+                            <div class="product-row product-name">Vestido amarillo</div>
+                            <div class="product-row product-price">Precio: $<span id="precio4"></span></div>
+                            <div class="product-row product-quantity">Cantidad:
+                                <input type="number" class="quantity-input" min="1" value="1">
+                            </div>
+                            <div class="product-row"><button class="buy-button" data-product-id="4">Comprar</button></div>
+                        </div>
                     </div>
-
-                    <button onclick="openModal();" style="background-color: #FFC0CB;">Finalizar compra</button>
-                    <dialog id="modal" style="text-align:center;" class="ventana">
+            
+                    <button class="finalizar-button" onclick="openModal();">Finalizar compra</button>
+                    <dialog id="modal" class="ventana">
                         <table>
                             <tr>
-                                <td>Nombre del producto</td>
+                                <td>Producto</td>
                                 <td>Precio</td>
                                 <td>Cantidad</td>
                                 <td>Total</td>
                             </tr>
                             <tr>
-                                <td><img src="C:\Users\CriaturaKawaii\Desktop\Administracion de bases de datos\Pagina de productos/imagen1.png"
-                                        alt="Producto 1" style="width: 100px; height: 150;"></td>
+                                <td><img src="C:\Users\CriaturaKawaii\Documents\PracticaDash\Views\Assets\img\imagen1.png" alt="Producto 1" style="width: 100px; height: 100px;"></td>
                                 <td id="precio-modal1"></td>
                                 <td id="cantidad1"></td>
                                 <td id="total1"></td>
                             </tr>
                             <tr>
-                                <td><img src="C:\Users\CriaturaKawaii\Desktop\Administracion de bases de datos\Pagina de productos/imagen2.png"
-                                        alt="Producto 2" style="width: 100px; height: 150;"></td>
+                                <td><img src="C:\Users\CriaturaKawaii\Documents\PracticaDash\Views\Assets\img\imagen2.png" alt="Producto 2" style="width: 100px; height: 100px;"></td>
                                 <td id="precio-modal2"></td>
                                 <td id="cantidad2"></td>
                                 <td id="total2"></td>
                             </tr>
                             <tr>
-                                <td><img src="C:\Users\CriaturaKawaii\Desktop\Administracion de bases de datos\Pagina de productos/imagen3.png"
-                                        alt="Producto 3" style="width: 100px; height: 150;"></td>
+                                <td><img src="C:\Users\CriaturaKawaii\Documents\PracticaDash\Views\Assets\img\imagen3.png" alt="Producto 3" style="width: 100px; height: 100px;"></td>
                                 <td id="precio-modal3"></td>
                                 <td id="cantidad3"></td>
                                 <td id="total3"></td>
                             </tr>
                             <tr>
-                                <td><img src="C:\Users\CriaturaKawaii\Desktop\Administracion de bases de datos\Pagina de productos/imagen4.png"
-                                        alt="Producto 4" style="width: 100px; height: 150;"></td>
+                                <td><img src="C:\Users\CriaturaKawaii\Documents\PracticaDash\Views\Assets\img\imagen4.png" alt="Producto 4" style="width: 100px; height: 100px;"></td>
                                 <td id="precio-modal4"></td>
                                 <td id="cantidad4"></td>
                                 <td id="total4"></td>
@@ -245,62 +200,58 @@
                                 <td id="totalPrecio"></td>
                             </tr>
                         </table>
-                        <button onclick="window.modal.close();" style="background-color: #FFC0CB;">Cerrar</button>
+                        <button onclick="window.modal.close();" class="finalizar-button">Cerrar</button>
                     </dialog>
-
-                    <script>
-                        // Definir los precios y hacerlos globales
-                        window.precio1 = 20.00;
-                        window.precio2 = 30.00;
-                        window.precio3 = 40.00;
-                        window.precio4 = 50.00;
-                        // Mostrar los precios en los elementos HTML correspondientes
-                        document.getElementById("precio1").textContent = precio1.toFixed(2);
-                        document.getElementById("precio2").textContent = precio2.toFixed(2);
-                        document.getElementById("precio3").textContent = precio3.toFixed(2);
-                        document.getElementById("precio4").textContent = precio4.toFixed(2);
-
-                        // Agregar event listeners a los botones de comprar
-                        document.querySelectorAll('.buy-button').forEach(function (button) {
-                            button.addEventListener('click', function () {
-                                var productId = this.getAttribute('data-product-id');
-                                var quantityInput = this.previousElementSibling.querySelector('.quantity-input');
-                                var quantity = quantityInput.value;
-
-                                // Guardar la cantidad en el almacenamiento local
-                                localStorage.setItem('product_' + productId + '_quantity', quantity);
-                                console.log('Cantidad comprada del producto ' + productId + ': ' + quantity);
-                            });
-                        });
-
-                        function openModal() {
-                            // Recuperar los precios y cantidades del almacenamiento local
-                            const precios = [20.00, 30.00, 40.00, 50.00];
-                            let totalCantidad = 0;
-                            let totalPrecio = 0;
-
-                            for (let i = 1; i <= 4; i++) {
-                                const cantidad = parseInt(localStorage.getItem('product_' + i + '_quantity')) || 0;
-                                document.getElementById('precio-modal' + i).textContent = '$' + precios[i - 1].toFixed(2);
-                                document.getElementById('cantidad' + i).textContent = cantidad;
-                                const total = precios[i - 1] * cantidad;
-                                document.getElementById('total' + i).textContent = '$' + total.toFixed(2);
-                                totalCantidad += cantidad;
-                                totalPrecio += total;
-                            }
-
-                            // Mostrar el total general al final de la tabla
-                            document.getElementById('totalCantidad').textContent = totalCantidad;
-                            document.getElementById('totalPrecio').textContent = '$' + totalPrecio.toFixed(2);
-
-                            window.modal.showModal();
-                        }
-                    </script>
-
                 </div>
-                <!-- /.container-fluid -->
-
-            </div>
+            
+                <script>
+                    // Definir los precios y hacerlos globales
+                    window.precio1 = 20.00;
+                    window.precio2 = 30.00;
+                    window.precio3 = 40.00;
+                    window.precio4 = 50.00;
+                    // Mostrar los precios en los elementos HTML correspondientes
+                    document.getElementById("precio1").textContent = precio1.toFixed(2);
+                    document.getElementById("precio2").textContent = precio2.toFixed(2);
+                    document.getElementById("precio3").textContent = precio3.toFixed(2);
+                    document.getElementById("precio4").textContent = precio4.toFixed(2);
+            
+                    // Agregar event listeners a los botones de comprar
+                    document.querySelectorAll('.buy-button').forEach(function (button) {
+                        button.addEventListener('click', function () {
+                            var productId = this.getAttribute('data-product-id');
+                            var quantityInput = this.previousElementSibling.querySelector('.quantity-input');
+                            var quantity = quantityInput.value;
+            
+                            // Guardar la cantidad en el almacenamiento local
+                            localStorage.setItem('product_' + productId + '_quantity', quantity);
+                            console.log('Cantidad comprada del producto ' + productId + ': ' + quantity);
+                        });
+                    });
+            
+                    function openModal() {
+                        // Recuperar los precios y cantidades del almacenamiento local
+                        const precios = [20.00, 30.00, 40.00, 50.00];
+                        let totalCantidad = 0;
+                        let totalPrecio = 0;
+            
+                        for (let i = 1; i <= 4; i++) {
+                            const cantidad = parseInt(localStorage.getItem('product_' + i + '_quantity')) || 0;
+                            document.getElementById('precio-modal' + i).textContent = '$' + precios[i - 1].toFixed(2);
+                            document.getElementById('cantidad' + i).textContent = cantidad;
+                            const total = precios[i - 1] * cantidad;
+                            document.getElementById('total' + i).textContent = '$' + total.toFixed(2);
+                            totalCantidad += cantidad;
+                            totalPrecio += total;
+                        }
+            
+                        // Mostrar el total general al final de la tabla
+                        document.getElementById('totalCantidad').textContent = totalCantidad;
+                        document.getElementById('totalPrecio').textContent = '$' + totalPrecio.toFixed(2);
+            
+                        window.modal.showModal();
+                    }
+                </script>
             <!-- End of Main Content -->
 
             <!-- Footer -->

@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Crear la gráfica para la cantidad de productos
     const data1 = [{
-        x: ['Producto 1', 'Producto 2', 'Producto 3', 'Producto 4', 'Total General'],
+        x: ['Camisa', 'Vestido', 'Pantalon', 'Traje', 'Total General'],
         y: cantidadProductos,
         type: 'bar'
     }];
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Crear la gráfica para el total pagado por producto
     const data2 = [{
-        x: ['Producto 1', 'Producto 2', 'Producto 3', 'Producto 4', 'Total General'],
+        x: ['Camisa', 'Vestido', 'Pantalon', 'Traje', 'Total General'],
         y: totalPagadoPorProducto,
         type: 'bar'
     }];

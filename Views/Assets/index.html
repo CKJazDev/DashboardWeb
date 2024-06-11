@@ -20,6 +20,7 @@
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
 
 </head>
 
@@ -44,12 +45,12 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link active" href="index.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
 
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="blank.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>productos</span></a>
@@ -121,16 +122,15 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
+
                 <div class="container-fluid">
                     <div class="grafico">
-                        <div id="chart1"></div>
-                        <div id="chart2"></div>
+                        <div id="chart1" class="chart"></div>
+                        <div id="chart2" class="chart"></div>
                     </div>
                     <script src="js/script.js"></script>
-
-
                 </div>
-                <!-- /.container-fluid -->
+
 
             </div>
             <!-- End of Main Content -->

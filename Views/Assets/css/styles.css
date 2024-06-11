@@ -1,0 +1,54 @@
+/* styles.css */
+
+* {
+    box-sizing: border-box;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #f4f6f8; /* Fondo del dashboard */
+}
+
+.grafico {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten */
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Ancho máximo del contenedor de los gráficos */
+    margin: 0 auto;
+}
+
+.chart {
+    flex: 1 1 45%; /* Permite que los gráficos se ajusten y mantengan un ancho de aproximadamente 45% */
+    max-width: 45%; /* Ancho máximo de cada gráfico */
+    height: 400px; /* Altura de cada gráfico */
+    background-color: #ffffff; /* Fondo de cada gráfico */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar efecto de tarjeta */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px;
+    margin: 20px;
+    overflow: hidden; /* Evita que el contenido sobresalga */
+}
+
+/* Estilos de la paleta de colores azul */
+.chart-title {
+    color: #1f78b4; /* Azul principal */
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.chart-content {
+    color: #1f78b4; /* Azul principal */
+}
+
+.chart-border {
+    border: 2px solid #1f78b4; /* Borde azul */
+    border-radius: 8px; /* Bordes redondeados */
+}
